@@ -28,11 +28,9 @@ final class StatisticServiceImplementation: StatisticService {
     private var correct: Int {
         return userDefaults.integer(forKey: Keys.correct.rawValue)
     }
-    
     private var total: Int {
         return userDefaults.integer(forKey: Keys.total.rawValue)
     }
-    
     var totalAccuracy: Double {
         get {
             let correctCount = Double(userDefaults.integer(forKey: Keys.correct.rawValue))
@@ -40,7 +38,6 @@ final class StatisticServiceImplementation: StatisticService {
             return 100 * (correctCount / total)
         }
     }
-    
     var gamesCount: Int {
         get {
             let count = userDefaults.integer(forKey: Keys.gamesCount.rawValue)
@@ -50,7 +47,6 @@ final class StatisticServiceImplementation: StatisticService {
             return userDefaults.set(newValue, forKey: Keys.gamesCount.rawValue)
         }
     }
-    
     var bestGame: GameRecord {
         get {
             guard let data = userDefaults.data(forKey: Keys.bestGame.rawValue),
