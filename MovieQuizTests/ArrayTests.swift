@@ -8,7 +8,7 @@
 import XCTest
 @testable import MovieQuiz
 
-class ArrayTests: XCTest {
+class ArrayTests: XCTestCase {
     func testGetValueInRange() throws {
         let array = [1, 1, 2, 3, 5]
         
